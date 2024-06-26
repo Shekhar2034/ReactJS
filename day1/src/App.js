@@ -7,6 +7,11 @@ import Login from './Components/Form/Login';
 import UseState from './Components/usestate/UseState';
 import Register from './Components/Form/Register';
 import ChildComponent from './Components/childComponent/ChildComponent';
+import Mapping from './Components/mapping and all products/Mapping';
+import AllProducts from './Components/mapping and all products/AllProducts';
+import Usereducer from './Components/usereducer/Usereducer';
+import Todo from './Components/Todo/Todo'
+
 
 function App() {
   return (
@@ -18,6 +23,11 @@ function App() {
       <Route path="/use-state" element={<UseState/>}></Route>
       <Route path="/register" element={<Register />}></Route>
       <Route path="/child-component" element={<ChildComponent />}></Route>
+      <Route path="/mapping" element={<Mapping students={["Virat", "Rohit", "Dhoni"]} />}></Route>
+      <Route path="/all-products" element={<AllProducts  />}></Route> 
+      <Route path="/reducer" element={<Usereducer/>}></Route> 
+      <Route path="/todo" element={<Todo />}></Route> 
+      {/* <Route path="/useContext" element={<UseContext/>}></Route>  */}
      </Routes>
     </div>
   );

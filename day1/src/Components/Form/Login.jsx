@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from 'react';
+import { AuthContext } from "../context/auth.context";
 
 function Login(){
+   const[state, dispatch] = useContext(AuthContext);
 
     const router = useNavigate();
     const [errors, setErrors] = useState([]);
@@ -22,9 +24,10 @@ function Login(){
         try {
             if(userData.email && userData.password){
                 const respone = {
-                    data :{success: true, message: "Login Successfull."} 
+                    data :{success: true, message: "Login Successfull.", userData: {name : "Shekhar"}} 
                 };
                 if(respone.data.success){
+                    dispatch({type : "LOGIN" , payload : userData})
                     setUserData({
                         email: "",
                         password: ""
