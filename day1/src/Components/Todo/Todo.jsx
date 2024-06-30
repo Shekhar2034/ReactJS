@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 const Todo = () => {
     const [todos, setTodos] = useState("");
-    const [allTodo, setAllTodo] = useState([])
+    const [allTodo, setAllTodo] = useState([]);
 
     function handleChange(event){
         setTodos(event.target.value);
@@ -31,7 +31,7 @@ const Todo = () => {
                 justifyContent: "space-around",
               }} >
                 <p>{" "}{i + 1}. {todo}</p>
-                <button onClick={() => deleteTodo(i)}>Delete.</button>
+                <button onClick={() => deleteTodo(i)}>Delete.</button>                
             </div>
         ))}
     </div>

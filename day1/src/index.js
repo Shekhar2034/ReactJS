@@ -6,14 +6,16 @@ import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import MyContextProvider from './Components/context/auth.context';
+import ThemeContextProvider from './Components/theme/theme.context';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
-  <MyContextProvider>
-    <React.StrictMode>
-    <Toaster
-        position="top-center"
+    <MyContextProvider>
+      <ThemeContextProvider>
+        <React.StrictMode>
+          <Toaster
+           position="top-center"
         reverseOrder={false}
         gutter={8}
         containerClassName=""
@@ -35,11 +37,12 @@ root.render(
               secondary: "black",
             },
           },
-        }}
-      />
-      <App />
-    </React.StrictMode>
-  </MyContextProvider>
+           }}
+          />
+            <App />
+        </React.StrictMode>
+      </ThemeContextProvider>
+    </MyContextProvider>
   </BrowserRouter>
 );
 

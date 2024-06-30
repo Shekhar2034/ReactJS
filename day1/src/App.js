@@ -11,6 +11,8 @@ import Mapping from './Components/mapping and all products/Mapping';
 import AllProducts from './Components/mapping and all products/AllProducts';
 import Usereducer from './Components/usereducer/Usereducer';
 import Todo from './Components/Todo/Todo'
+import Memo from './Components/usecallback/Memo';
+import UseMemo from './Components/usecallback/UseMemo';
 
 
 function App() {
@@ -27,6 +29,8 @@ function App() {
       <Route path="/all-products" element={<AllProducts  />}></Route> 
       <Route path="/reducer" element={<Usereducer/>}></Route> 
       <Route path="/todo" element={<Todo />}></Route> 
+      <Route path="/memo" element={<Memo />}></Route> 
+      <Route path="/use-memo" element={<UseMemo />}></Route> 
       {/* <Route path="/useContext" element={<UseContext/>}></Route>  */}
      </Routes>
     </div>

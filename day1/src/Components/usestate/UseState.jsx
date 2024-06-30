@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { themeContect } from "../theme/theme.context";
 
 function UseState(){
     const [counter, setCounter] = useState(1);
     const [counter1, setCounter1] = useState(10);
+    const {themeState, dispatch} = useContext(themeContect);
 
     function Increment(){
         setCounter(counter + 1);
@@ -26,7 +28,7 @@ function UseState(){
     }
 
     return(
-        <div>
+        <div >
             <h1>Counter 1 :{counter} </h1>
             <button onClick={Increment}>+</button>
             <button onClick={Decrement}>-</button>
@@ -34,7 +36,16 @@ function UseState(){
 
             <h1>Counter 2 : {counter1} </h1>
             <button onClick={addOn}>+</button>
-            <button onClick={downOn}>-</button>
+            <button onClick={downOn}>-</button><br /><br /><br /><br />
+
+            <div style={{
+            backgroundColor : themeState.theme === "light" ? "Green" : "GRAY"
+        }}>
+                <button onClick={
+                    () => dispatch({type : themeState?.theme === "light" ? "DARK" : "LIGHT"})
+                }>Change {themeState?.theme === "light" ? "light" : "dark"} theme</button>
+            </div>
+            
         </div>
     )
 }
