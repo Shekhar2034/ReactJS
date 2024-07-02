@@ -24,4 +24,4 @@ function ExpensiveComponent(counter){
     return totalCount;
 }
 
-export default UseMemo
+export default UseMemo;
