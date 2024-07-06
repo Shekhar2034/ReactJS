@@ -13,6 +13,11 @@ import Usereducer from './Components/usereducer/Usereducer';
 import Todo from './Components/Todo/Todo'
 import Memo from './Components/usecallback/Memo';
 import UseMemo from './Components/usecallback/UseMemo';
+import State from './Components/Test/State';
+import Effect from './Components/Test/Effect';
+import Product from './Components/Test/Product';
+import Regis from './Components/Test/Regis';
+import Log from './Components/Test/Log';
 
 
 function App() {
@@ -31,6 +36,11 @@ function App() {
       <Route path="/todo" element={<Todo />}></Route> 
       <Route path="/memo" element={<Memo />}></Route> 
       <Route path="/use-memo" element={<UseMemo />}></Route> 
+      <Route path="/useState" element={<State />}></Route> 
+      <Route path="/effect" element={<Effect />}></Route> 
+      <Route path="/product" element={<Product />}></Route> 
+      <Route path="/regis" element={<Regis />}></Route> 
+      <Route path="/log" element={<Log />}></Route> 
       {/* <Route path="/useContext" element={<UseContext/>}></Route>  */}
      </Routes>
     </div>
