@@ -18,6 +18,8 @@ import Effect from './Components/Test/Effect';
 import Product from './Components/Test/Product';
 import Regis from './Components/Test/Regis';
 import Log from './Components/Test/Log';
+import State1 from './Components/usestate/State1';
+import Todo1 from './Components/Todo/Todo1';
 
 
 function App() {
@@ -41,6 +43,8 @@ function App() {
       <Route path="/product" element={<Product />}></Route> 
       <Route path="/regis" element={<Regis />}></Route> 
       <Route path="/log" element={<Log />}></Route> 
+      <Route path="/state" element={<State1 />}></Route> 
+      <Route path="/to-do" element={<Todo1 />}></Route> 
       {/* <Route path="/useContext" element={<UseContext/>}></Route>  */}
      </Routes>
     </div>
